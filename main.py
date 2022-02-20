@@ -8,7 +8,7 @@ from database import Person
 class MyWidget(QWidget):
     def __init__(self):
         super().__init__()
-        uic.loadUi('main.ui', self)
+        uic.loadUi('pyfilename.py', self)
         conn = sqlite3.connect('coffee.db')
         self.cur = conn.cursor()
         self.result = self.cur.execute("""SELECT * FROM Person""").fetchall()
